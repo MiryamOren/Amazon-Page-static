@@ -28,9 +28,10 @@ nav {
 
 nav .nav__main {
   width: 100%;
-  height: 57px;
+  height: 60px;
   background-color: #131921;
-  display: flex;
+  display: grid;
+  grid-template-columns: 228px auto 400px;
 }
 
 .nav__main > div {
@@ -39,63 +40,80 @@ nav .nav__main {
   height: 100%;
 }
 
-.nav-main__left {
-  width: 17%;
-}
 .nav-main__left ul {
   list-style: none;
   display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .nav-main__left ul li {
   display: inline-block;
-}
-
-.nav-main-left__country {
   display: flex;
-  flex-direction: row;
-  color: #fff;
-}
-
-/* .nav-main-left__country i, */
-.nav-main-left__country div {
-  display: inline-block;
   height: 100%;
 }
 
-.nav-main-left__country > div {
+.nav-main-left__logo {
+  height: 100%;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-main-left__logo img {
+  height: 40px;
+  width: 100px;
+}
+
+.nav-main-left__country {
+  display: inline-block;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 17px;
 }
-.nav-main-left__country > div > h6 {
+
+.nav-main-left__country > h6 {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   color: #cccccc;
 }
 
-.nav-main-left__country > div > h5 {
+.nav-main-left__country > h5 {
   font-weight: 700;
   font-size: 15px;
   line-height: 15px;
   color: #fff;
+  position: relative;
+  overflow: visible;
 }
 
-.nav-main__center {
-  width: 56%;
+.nav-main-left__country > h5::after {
+  content: "";
+  background: url(../img/map-pin-icon.png) no-repeat center center/cover;
+  position: absolute;
+  left: -17px;
+  bottom: 0;
+  height: 15px;
+  width: 15px;
+}
+
+.nav__main .nav-main__center {
   display: flex;
+  align-items: center;
 }
 
 .nav-main-center__search {
   height: 38px;
+  width: 100%;
   background-color: #fff;
   border-radius: 5px;
   align-self: center;
-  margin: calc((57px - 38px) / 2) 5px;
   display: grid;
-  grid-template-columns: 50px auto 40px;
-  border: 1px solid #cdcdcd;
+  grid-template-columns: 50px auto 44px;
 }
 
 .nav-main-center__search select {
@@ -123,11 +141,48 @@ nav .nav__main {
 }
 
 .nav-main-center__search #search-submit-btn {
-  background-color: rgb(243, 170, 61);
+  position: relative;
+  background: url(../img/search-icon.png) no-repeat center center/cover
+    rgb(243, 170, 61);
+  cursor: pointer;
 }
 
 .nav-main__right {
-  width: 27%;
+  margin-left: 32px;
+}
+
+.nav-main__right ul {
+  height: 100%;
+  display: flex;
+  list-style: none;
+}
+.nav-main__right ul li {
+  display: inline-block;
+  color: #fff;
+  margin-right: 15px;
+  height: 100%;
+  border: green solid 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-main-right__language select {
+  background-color: #131921;
+  color: #5d6269;
+  background: url(../img/us-flag.png) no-repeat;
+}
+
+.nav-main__right ul li h6 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.nav-main__right ul li h5 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
 }
 
 nav .nav__secondary {
@@ -139,7 +194,16 @@ nav .nav__secondary {
 nav .nav__product-path {
   width: 100%;
   height: 24px;
-  background-color: seagreen;
+  margin-left: 15px;
+}
+.nav__product-path a,
+.nav__product-path p {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #565959;
+  display: inline;
 }
 
 main {
