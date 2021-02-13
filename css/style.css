@@ -5,6 +5,7 @@
 
 :root {
   --font: Amazon-Ember;
+  --width: calc(Screen.width - 1000px);
 }
 
 * {
@@ -17,7 +18,7 @@
 
 body {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: auto;
 }
@@ -26,8 +27,8 @@ body {
   margin: auto;
   font-family: var(--font);
   position: absolute;
+  width: var(--width);
   width: 1350px;
-  /* height: 100vh; */
 }
 
 nav {
@@ -44,7 +45,6 @@ nav .nav__main {
 
 .nav__main > div {
   display: inline-block;
-  /* border: red solid 2px; */
   height: 100%;
 }
 
@@ -181,7 +181,6 @@ nav .nav__main {
   color: #fff;
   margin-right: 15px;
   height: 100%;
-  border: green solid 2px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -221,7 +220,6 @@ nav .nav__secondary {
   display: inline-block;
   height: 25px;
   margin: 0px 9px;
-  border: yellow 2px solid;
 }
 
 .nav-secondary__left ul li:first-child a {
@@ -266,7 +264,6 @@ main {
 main > div {
   display: inline-block;
   height: 100%;
-  /* border: red solid 2px; */
 }
 
 .main__product-img {
@@ -463,6 +460,99 @@ i {
 
 .main__payment-details {
   width: 18%;
+  margin-left: 26px;
+}
+
+.payment-details__main {
+  border: #a2a6ac 0.5px solid;
+  border-radius: 10px;
+  padding: 20px;
+}
+.payment-details__main .btn {
+  width: 205px;
+  height: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.orange-btn {
+  background-color: #f2c75e;
+}
+
+.grey-btn {
+  background-color: #8d9096;
+}
+.payment-details__main h1 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b12704;
+}
+.payment-details__main h6,
+.payment-details__main a,
+.payment-details__main p,
+.payment-details__main label[for="gift-receipt"] {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.payment-details__main h6 {
+  color: #565959;
+}
+.payment-details__main a {
+  color: #007185;
+}
+.payment-details__main p {
+  color: #0f1111;
+  margin-top: 20px;
+}
+.payment-details__main p .weight700 {
+  font-weight: 700;
+}
+.payment-details__main h2 {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #007600;
+}
+.payment-details__main select {
+  font-family: var(--font);
+}
+.payment-details__main table {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+
+.payment-details__main table th {
+  text-align: left;
+  padding-right: 20px;
+  color:#565959;
+  font-weight: 400;
+}
+}
+.payment-details__main input[type="checkbox"] {
+}
+.payment-details__main label[for="gift-receipt"] {
+  color: #0f1111;
+}
+.payment-details__main .deliver-to{
+  display: block;
+  margin-top: 8px;
+  padding-top: 16px;
+  padding-bottom: 8px;
+  border-bottom: #a2a6ac 0.5px solid;
+  border-top:  #a2a6ac 0.5px solid;
 }
 
 footer {
