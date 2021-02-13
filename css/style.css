@@ -11,15 +11,23 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: red solid 1px; */
   overflow: hidden;
   border: none;
 }
 
 body {
-  width: 100vw;
+  position: relative;
+  width: 100%;
   height: 100vh;
+  overflow: auto;
+}
+
+.container {
+  margin: auto;
   font-family: var(--font);
+  position: absolute;
+  width: 1350px;
+  /* height: 100vh; */
 }
 
 nav {
@@ -36,8 +44,25 @@ nav .nav__main {
 
 .nav__main > div {
   display: inline-block;
-  border: red solid 2px;
+  /* border: red solid 2px; */
   height: 100%;
+}
+
+.nav__main ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav__main ul li a h6 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.nav__main ul li a h5 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
 }
 
 .nav-main__left ul {
@@ -72,26 +97,21 @@ nav .nav__main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 17px;
 }
 
-.nav-main-left__country > h6 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+.nav-main-left__country a h6 {
   color: #cccccc;
 }
-
-.nav-main-left__country > h5 {
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 15px;
+.nav-main-left__country a {
+  padding-left: 17px;
+}
+.nav-main-left__country a h5 {
   color: #fff;
   position: relative;
   overflow: visible;
 }
 
-.nav-main-left__country > h5::after {
+.nav-main-left__country a h5::after {
   content: "";
   background: url(../img/map-pin-icon.png) no-repeat center center/cover;
   position: absolute;
@@ -173,28 +193,58 @@ nav .nav__main {
   background: url(../img/us-flag.png) no-repeat;
 }
 
-.nav-main__right ul li h6 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-}
-
-.nav-main__right ul li h5 {
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 15px;
-}
-
 nav .nav__secondary {
   width: 100%;
   height: 38px;
   background-color: #232f3e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__secondary a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-secondary__left ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-secondary__left ul li,
+.nav-secondary__right {
+  display: inline-block;
+  height: 25px;
+  margin: 0px 9px;
+  border: yellow 2px solid;
+}
+
+.nav-secondary__left ul li:first-child a {
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  padding-left: 25px;
+}
+.nav-secondary__left ul li:first-child a::after {
+  content: "";
+  background: url(../img/hamburger-menu.png) no-repeat center center/cover;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 0;
+  left: 0px;
 }
 
 nav .nav__product-path {
   width: 100%;
   height: 24px;
   margin-left: 15px;
+  margin-bottom: 20px;
 }
 .nav__product-path a,
 .nav__product-path p {
@@ -207,25 +257,261 @@ nav .nav__product-path {
 }
 
 main {
-  display: flexbox;
+  display: flex;
   width: 100%;
-  height: 820px;
+  height: 710px;
+  border-bottom: #a2a6ac 0.5px solid;
 }
 
-main div {
+main > div {
   display: inline-block;
   height: 100%;
-  border: red solid 2px;
+  /* border: red solid 2px; */
 }
 
 .main__product-img {
-  width: 45%;
+  width: 408px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+.main-product-img__main-img {
+  width: 100%;
+  height: 420px;
+  background: url(../img/Product_image_1.jpg) no-repeat center center/cover;
+}
+.main-product-img__3-under-imgs {
+  align-self: center;
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-product-img__3-under-imgs > div {
+  height: 40px;
+  width: 40px;
+  border: #a2a6ac 0.5px solid;
+}
+
+.under-imgs__img1 {
+  background: url(../img/Product_image_1.jpg) no-repeat center center/cover;
+}
+.under-imgs__img2 {
+  background: url(../img/Product_image_2.jpg) no-repeat center center/cover;
+}
+.under-imgs__img3 {
+  background: url(../img/Product_image_3.jpg) no-repeat center center/cover;
 }
 
 .main__product-details {
-  width: 35%;
+  width: 420px;
+  margin-left: 90px;
+}
+
+.main__product-details a {
+  text-decoration: none;
+  color: #007185;
+}
+
+.main__product-details h1 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #0f1111;
+}
+
+.product-details__bedtime-store,
+.product-details__rating {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+i {
+  color: #e19959;
+}
+.product-details__amazons-choice {
+}
+
+.product-details__amazons-choice .amazons-choice-box {
+  display: inline-block;
+  background-color: #232f3e;
+  padding: 1px 5px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+}
+.product-details__amazons-choice .amazons-choice-box .highlight-color {
+  color: #f69931;
+}
+
+.product-details__amazons-choice .amazons-choice-right {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #111111;
+}
+
+.product-details__amazons-choice .amazons-choice-right a {
+  font-size: 12px;
+}
+
+.product-details__price {
+  width: 100%;
+  padding-top: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: #a2a6ac 0.5px solid;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #565959;
+  display: flex;
+}
+
+.price_content {
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.price_content h1,
+.price_content h6 {
+  display: inline;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b12704;
+}
+.price_content h6 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product-details__style {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #565959;
+  margin-bottom: 10px;
+}
+
+.product-details__style .weight700 {
+  color: #000;
+  font-weight: 700;
+}
+
+.product-details__table1 {
+  font-size: 14px;
+}
+.product-details__table1 th {
+  text-align: left;
+  padding-right: 10px;
+}
+.product-details__about {
+  width: 100%;
+  padding-top: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: #a2a6ac 0.5px solid;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0f1111;
+}
+
+.product-details__about ul {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.product-details__about a {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.product-details__multiple-rating {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0f1111;
+}
+
+.product-details__multiple-rating table {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.product-details__multiple-rating table th {
+  text-align: left;
+  padding-right: 120px;
+}
+
+.product-details__multiple-rating a {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
 }
 
 .main__payment-details {
   width: 18%;
+}
+
+footer {
+  margin-top: 18px;
+  margin-left: 15px;
+}
+
+footer h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 32px;
+  color: #cc6600;
+  margin-bottom: 20px;
+}
+
+.footer__items-warp {
+  display: flex;
+  margin: 0 72px;
+}
+
+footer .footer__item {
+  height: 255px;
+  width: 165px;
+  display: flex;
+  flex-direction: column;
+  margin: 6px;
+}
+
+.footer__item a {
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.footer__item .footer-item__img {
+  height: 150px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.footer-item__description {
+  color: #007185;
+}
+.footer__item .footer-item__rating {
+  font-size: 12px;
+  line-height: 16px;
+  color: #007185;
+}
+.footer-item__price {
+  color: #b12704;
 }

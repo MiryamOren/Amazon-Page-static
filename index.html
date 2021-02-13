@@ -19,68 +19,318 @@
     <title>Document</title>
   </head>
   <body>
-    <nav>
-      <div class="nav__main">
-        <div class="nav-main__left">
-          <ul>
-            <li class="nav-main-left__logo">
-              <img src="./img/amazon-logo.png" alt="amazon-logo" />
-            </li>
-            <li class="nav-main-left__country">
-              <h6>Deliver to</h6>
-              <h5>Israel</h5>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-main__center">
-          <div class="nav-main-center__search">
-            <select>
-              <option value="all">All</option>
-              <option value="bla">bla</option>
-              <option value="bla">bla</option>
-              <option value="bla">bla</option>
-            </select>
-            <input type="text" id="search-text-box" name="search" />
-            <input type="submit" id="search-submit-btn" value="" />
+    <div class="container">
+      <nav>
+        <div class="nav__main">
+          <div class="nav-main__left">
+            <ul>
+              <li class="nav-main-left__logo">
+                <a href="#">
+                  <img src="./img/amazon-logo.png" alt="amazon-logo" />
+                </a>
+              </li>
+              <li class="nav-main-left__country">
+                <a href="#">
+                  <h6>Deliver to</h6>
+                  <h5>Israel</h5>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="nav-main__right">
-          <ul>
-            <li class="nav-main-right__language">
+          <div class="nav-main__center">
+            <div class="nav-main-center__search">
               <select>
-                <option value="english"></option>
+                <option value="all">All</option>
                 <option value="bla">bla</option>
                 <option value="bla">bla</option>
                 <option value="bla">bla</option>
               </select>
-            </li>
-            <li class="nav-main-right__account">
-              <h6>Hello, user</h6>
-              <h5>Account&Lists</h5>
-            </li>
-            <li class="nav-main-right__returns&orders">
-              <h6>Returns</h6>
-              <h5>&Orders</h5>
-            </li>
-            <li class="nav-main-right__cart">
-              <h5>Cart</h5>
-            </li>
-          </ul>
+              <input type="text" id="search-text-box" name="search" />
+              <input type="submit" id="search-submit-btn" value="" />
+            </div>
+          </div>
+          <div class="nav-main__right">
+            <ul>
+              <li class="nav-main-right__language">
+                <a href="#">
+                  <select></select>
+                </a>
+              </li>
+              <li class="nav-main-right__account">
+                <a href="#">
+                  <h6>Hello, user</h6>
+                  <h5>Account&Lists</h5>
+                </a>
+              </li>
+              <li class="nav-main-right__returns&orders">
+                <a href="#">
+                  <h6>Returns</h6>
+                  <h5>&Orders</h5>
+                </a>
+              </li>
+              <li class="nav-main-right__cart">
+                <a href="#">
+                  <h5>Cart</h5>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="nav__secondary"></div>
-      <div class="nav__product-path">
-        <a href="#" class="nav-product-path1">Toys & Games</a>
-        <p>></p>
-        <a href="#" class="nav-product-path2">Stuffed Animals & Plush Toys</a>
-        <p>></p>
-        <a href="#" class="nav-product-path3">Plush Figures</a>
-      </div>
-    </nav>
-    <main>
-      <div class="main__product-img"></div>
-      <div class="main__product-details"></div>
-      <div class="main__payment-details"></div>
-    </main>
+        <div class="nav__secondary">
+          <div class="nav-secondary__left">
+            <ul>
+              <li><a href="#">All</a></li>
+              <li><a href="#">Local Delivery in Israel</a></li>
+              <li><a href="#">Today's Deals</a></li>
+              <li><a href="#">Customer Service</a></li>
+              <li><a href="#">User's Amazon.com</a></li>
+              <li><a href="#">Buy Again</a></li>
+            </ul>
+          </div>
+          <div class="nav-secondary__right">
+            <a href="#">Amazon's response to COVID-19</a>
+          </div>
+        </div>
+        <div class="nav__product-path">
+          <a href="#" class="nav-product-path1">Toys & Games</a>
+          <p>›</p>
+          <a href="#" class="nav-product-path2">Stuffed Animals & Plush Toys</a>
+          <p>›</p>
+          <a href="#" class="nav-product-path3">Plush Figures</a>
+        </div>
+      </nav>
+      <main>
+        <div class="main__product-img">
+          <div class="main-product-img__main-img"></div>
+          <div class="main-product-img__3-under-imgs">
+            <div class="under-imgs__img1"></div>
+            <div class="under-imgs__img2"></div>
+            <div class="under-imgs__img3"></div>
+          </div>
+        </div>
+        <div class="main__product-details">
+          <h1>Bedtime Originals Choo Choo Express Plush Elephant - Humphrey</h1>
+          <a class="product-details__bedtime-store" href="#">
+            Visit the Bedtime Originals Store
+          </a>
+          <div class="product-details__rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <a href="#">9,857 ratings</a>
+          </div>
+          <div class="product-details__amazons-choice">
+            <div class="amazons-choice-box">
+              Amazon's <span class="highlight-color">Choice</span>
+            </div>
+            <div class="amazons-choice-right">
+              for <a href="#">"stuffed animal"</a>
+            </div>
+          </div>
+          <hr />
+          <div class="product-details__price">
+            price:
+            <div class="price_content">
+              <h1>ILS 33.22</h1>
+              <h6>(ILS 33.22 / Count) +</h6>
+              <p>No Import Fees Deposit & ILS 64.67 Shipping to Israel</p>
+              <a href="#">Details</a>
+            </div>
+          </div>
+          <div class="product-details__style">
+            <p>style: <span class="weight700"> Basic</span></p>
+          </div>
+          <table class="product-details__table1">
+            <tr>
+              <th>Brand</th>
+              <td>Bedtime Originals</td>
+            </tr>
+            <tr>
+              <th>Material</th>
+              <td>Polyester</td>
+            </tr>
+            <tr>
+              <th>Style</th>
+              <td>Basic</td>
+            </tr>
+          </table>
+          <div class="product-details__about">
+            About this item
+            <ul>
+              <li>Polyester</li>
+              <li>
+                Measures approximately 9" long x 8.5" wide, when sitting down
+              </li>
+            </ul>
+            <a href="#">› See more product details</a>
+          </div>
+          <div class="product-details__multiple-rating">
+            Customer ratings by feature
+            <table>
+              <tr>
+                <th>Giftable</th>
+                <td>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  4.9
+                </td>
+              </tr>
+              <tr>
+                <th>Softness</th>
+                <td>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  4.9
+                </td>
+              </tr>
+              <tr>
+                <th>Quality of materia</th>
+                <td>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  4.8
+                </td>
+              </tr>
+              <tr>
+                <th>Durability</th>
+                <td>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  4.8
+                </td>
+              </tr>
+            </table>
+            <a href="#">See all reviews</a>
+            <a href="#">Compare with similar items</a>
+            <a href="#"> Report incorrect product information.</a>
+          </div>
+        </div>
+        <div class="main__payment-details"></div>
+      </main>
+      <footer>
+        <h1>More items to explore</h1>
+        <div class="footer__items-warp">
+          <div class="footer__item">
+            <img src="./img/footer-img1.jpg" alt="" class="footer-item__img" />
+            <a href="#" class="footer-item__description"
+              >Bedtime Originals Twinkle Toes Pink Elephant Plush, Hazel
+            </a>
+            <a href="#" class="footer-item__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              10,251
+            </a>
+            <a href="#" class="footer-item__price">11.89$</a>
+          </div>
+          <div class="footer__item">
+            <img src="./img/footer-img2.jpg" alt="" class="footer-item__img" />
+            <a href="#" class="footer-item__description">
+              Bedtime Originals Rainbow Unicorn Plush Unicorn, Pearl/Pink
+            </a>
+            <a href="#" class="footer-item__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              166
+            </a>
+            <a href="#" class="footer-item__price">11.99$</a>
+          </div>
+          <div class="footer__item">
+            <img src="./img/footer-img3.jpg" alt="" class="footer-item__img" />
+            <a href="#" class="footer-item__description"
+              >Bedtime Originals Plush Fox, Sly
+            </a>
+            <a href="#" class="footer-item__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              435
+            </a>
+            <a href="#" class="footer-item__price">11.99$</a>
+          </div>
+          <div class="footer__item">
+            <img src="./img/footer-img4.jpg" alt="" class="footer-item__img" />
+            <a href="#" class="footer-item__description"
+              >Bedtime Originals Jungle Fun Plush Monkey - Bingo
+            </a>
+            <a href="#" class="footer-item__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              207
+            </a>
+            <a href="#" class="footer-item__price">11.99$</a>
+          </div>
+          <div class="footer__item">
+            <img src="./img/footer-img5.jpg" alt="" class="footer-item__img" />
+            <a href="#" class="footer-item__description"
+              >ECEJIX Plush Stuffed Elephant ,PINK 9 inch
+            </a>
+            <a href="#" class="footer-item__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              211
+            </a>
+            <a href="#" class="footer-item__price">9.99$</a>
+          </div>
+          <div class="footer__item">
+            <img src="./img/footer-img6.jpg" alt="" class="footer-item__img" />
+            <a href="#" class="footer-item__description"
+              >Bedtime Originals Plush Monkey Ollie, Brown
+            </a>
+            <a href="#" class="footer-item__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              2,234
+            </a>
+            <a href="#" class="footer-item__price">10.04$</a>
+          </div>
+          <div class="footer__item">
+            <img src="./img/footer-img7.jpg" alt="" class="footer-item__img" />
+            <a href="#" class="footer-item__description"
+              >Betheaces Aurora World Plush Lion 14"
+            </a>
+            <a href="#" class="footer-item__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              455
+            </a>
+            <a href="#" class="footer-item__price">14.95$</a>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
